@@ -17,7 +17,9 @@ public class AccountService {
 	public Account registerAccount(Account account) {
 		return accountRepository.save(account);
 	}
-
+        if (value.isPresent()) {
+         String stringValue = value.get();
+        }
 	public Account getAccountDetails(int accountId) {
 		return accountRepository.findById(accountId).get();
 	}
